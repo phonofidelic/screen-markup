@@ -1,0 +1,1 @@
+const SET_COLOR = 'set_color';
