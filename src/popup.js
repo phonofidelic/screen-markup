@@ -10,7 +10,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import reduxThunk from 'redux-thunk';
 import rootReducer from './reducers';
-
+import Tools from './containers/Tools';
 const inspector = window.window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
@@ -31,14 +31,6 @@ const store = createStoreWithMiddleware(rootReducer, inspector);
 //     )
 //   })
 // })
-
-class Tools extends Component {
-  render() {
-    return (
-      <div>tool</div>
-    );
-  }
-}
 
 ReactDOM.render(
   <Provider store={store}>
