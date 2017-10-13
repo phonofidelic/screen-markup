@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import colorPicker from './colorPicker';
+import settingsReducer from './settingsReducer';
 
 const rootReducer = combineReducers({
-	colorPicker: colorPicker
+	settingsReducer: settingsReducer
 })
 
 export default rootReducer;

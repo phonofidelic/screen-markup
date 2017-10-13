@@ -1,1 +1,1 @@
-const SET_COLOR = 'set_color';
+export const SET_COLOR = 'set_color';

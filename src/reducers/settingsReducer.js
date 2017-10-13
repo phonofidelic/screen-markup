@@ -4,7 +4,7 @@ const INITIAL_STATE = {
 	selectedColor: null
 };
 
-const inputReducer = (state = INITIAL_STATE, action) => {
+const settingsReducer = (state = INITIAL_STATE, action) => {
 	switch(action.type) {
 		case SET_COLOR:
 			return {
@@ -17,4 +17,4 @@ const inputReducer = (state = INITIAL_STATE, action) => {
 	}
 }
 
-export default inputReducer;
+export default settingsReducer;
