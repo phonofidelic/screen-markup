@@ -71,6 +71,10 @@
 "use strict";
 
 
+chrome.commands.getAll(function (commands) {
+  console.log('* commands:', commands);
+});
+
 /***/ })
 
 /******/ });

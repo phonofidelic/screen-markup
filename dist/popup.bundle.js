@@ -987,58 +987,62 @@ var _reducers = __webpack_require__(73);
 
 var _reducers2 = _interopRequireDefault(_reducers);
 
-var _Tools = __webpack_require__(79);
+var _App = __webpack_require__(85);
 
-var _Tools2 = _interopRequireDefault(_Tools);
+var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var inspector = window.window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
-
 var createStoreWithMiddleware = (0, _redux.applyMiddleware)(_reduxThunk2.default)(_redux.createStore);
 
-var store = createStoreWithMiddleware(_reducers2.default, inspector);
+var store = createStoreWithMiddleware(_reducers2.default);
 
 // chrome.storage.local.get((storedState) => {
-//   console.log('* storedState:', storedState)
-//   const initialState = {}
+//   console.log('* storedState:', storedState);
+//   const initialState = {};
 
 //   chrome.tabs.query({ currentWindow: true, active: true }, tabs => {
-//     const [activeTab] = tabs
+//     const [activeTab] = tabs;
 //     ReactDOM.render(
 //       <Provider store={store}>
 //         <div>hello</div>
 //       </Provider>,
 //       document.getElementById('root')
-//     )
-//   })
-// })
+//     );
+//   });
+// });
+
+// chrome.commands.getAll((commands) => {
+//   console.log('* commands:', commands);
+//   const initialState = {};
+
+//   chrome.tabs.query({ currentWindow: true, active: true }, tabs => {
+//     const [activeTab] = tabs;
+//     ReactDOM.render(
+//       <Provider store={store}>
+//         <div>hello</div>
+//       </Provider>,
+//       document.getElementById('root')
+//     );
+//   });
+// });
+
 
 _reactDom2.default.render(_react2.default.createElement(
   _reactRedux.Provider,
   { store: store, __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 51
     },
     __self: undefined
   },
-  _react2.default.createElement(
-    'div',
-    {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 37
-      },
-      __self: undefined
+  _react2.default.createElement(_App2.default, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
     },
-    _react2.default.createElement(_Tools2.default, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 37
-      },
-      __self: undefined
-    })
-  )
+    __self: undefined
+  })
 ), document.getElementById('root'));
 
 /***/ }),
@@ -23855,6 +23859,77 @@ exports.default = Tools;
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 81 */,
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+var _jsxFileName = '/Users/christopherclemons/Projects/Sandbox/screen-markup/src/containers/App.js';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Tools = __webpack_require__(79);
+
+var _Tools2 = _interopRequireDefault(_Tools);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var App = function (_Component) {
+	_inherits(App, _Component);
+
+	function App() {
+		_classCallCheck(this, App);
+
+		return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+	}
+
+	_createClass(App, [{
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				{
+					__source: {
+						fileName: _jsxFileName,
+						lineNumber: 7
+					},
+					__self: this
+				},
+				_react2.default.createElement(_Tools2.default, {
+					__source: {
+						fileName: _jsxFileName,
+						lineNumber: 8
+					},
+					__self: this
+				})
+			);
+		}
+	}]);
+
+	return App;
+}(_react.Component);
+
+exports.default = App;
 
 /***/ })
 /******/ ]);

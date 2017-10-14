@@ -10,31 +10,46 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import reduxThunk from 'redux-thunk';
 import rootReducer from './reducers';
-import Tools from './containers/Tools';
-const inspector = window.window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+import App from './containers/App';
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 
-const store = createStoreWithMiddleware(rootReducer, inspector);
+const store = createStoreWithMiddleware(rootReducer);
 
 // chrome.storage.local.get((storedState) => {
-//   console.log('* storedState:', storedState)
-//   const initialState = {}
+//   console.log('* storedState:', storedState);
+//   const initialState = {};
 
 //   chrome.tabs.query({ currentWindow: true, active: true }, tabs => {
-//     const [activeTab] = tabs
+//     const [activeTab] = tabs;
 //     ReactDOM.render(
 //       <Provider store={store}>
 //         <div>hello</div>
 //       </Provider>,
 //       document.getElementById('root')
-//     )
-//   })
-// })
+//     );
+//   });
+// });
+
+// chrome.commands.getAll((commands) => {
+//   console.log('* commands:', commands);
+//   const initialState = {};
+
+//   chrome.tabs.query({ currentWindow: true, active: true }, tabs => {
+//     const [activeTab] = tabs;
+//     ReactDOM.render(
+//       <Provider store={store}>
+//         <div>hello</div>
+//       </Provider>,
+//       document.getElementById('root')
+//     );
+//   });
+// });
+
 
 ReactDOM.render(
   <Provider store={store}>
-    <div><Tools /></div>
+    <App />
   </Provider>,
   document.getElementById('root')
 );
